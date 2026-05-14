@@ -30,8 +30,10 @@ listing202511 = pd.read_csv("data/CRMLSListing202511.csv")
 listing202512 = pd.read_csv("data/CRMLSListing202512.csv")
 
 listing202601 = pd.read_csv("data/CRMLSListing202601.csv")
-listing202602 = pd.read_csv("data/CRMLSListing202602.csv", encoding='cp1252')
-listing202603 = pd.read_csv("data/CRMLSListing202603.csv", encoding='cp1252')
+listing202602 = pd.read_csv("data/CRMLSListing202602.csv")
+listing202603 = pd.read_csv("data/CRMLSListing202603.csv")
+listing202604 = pd.read_csv("data/CRMLSListing202604.csv")
+
 
 sold202401 = pd.read_csv("data/CRMLSSold202401.csv")
 sold202402 = pd.read_csv("data/CRMLSSold202402.csv")
@@ -60,20 +62,22 @@ sold202511 = pd.read_csv("data/CRMLSSold202511.csv")
 sold202512 = pd.read_csv("data/CRMLSSold202512.csv")
 
 sold202601 = pd.read_csv("data/CRMLSSold202601.csv", low_memory=False) # mixed types
-sold202602 = pd.read_csv("data/CRMLSSold202602.csv", encoding='cp1252')
-sold202603 = pd.read_csv("data/CRMLSSold202603.csv", encoding='cp1252')
+sold202602 = pd.read_csv("data/CRMLSSold202602.csv")
+sold202603 = pd.read_csv("data/CRMLSSold202603.csv")
+sold202604 = pd.read_csv("data/CRMLSSold202604.csv")
+
 
 listing = pd.concat([listing202401, listing202402, listing202403, listing202404, listing202405, listing202406,
                      listing202407, listing202408, listing202409, listing202410, listing202411, listing202412,
                      listing202501, listing202502, listing202503, listing202504, listing202505, listing202506,
                      listing202507, listing202508, listing202509, listing202510, listing202511, listing202512,
-                     listing202601, listing202602, listing202603], ignore_index=True)
+                     listing202601, listing202602, listing202603, listing202604], ignore_index=True)
 
 sold = pd.concat([sold202401, sold202402, sold202403, sold202404, sold202405, sold202406,
                   sold202407, sold202408, sold202409, sold202410, sold202411, sold202412,
                   sold202501, sold202502, sold202503, sold202504, sold202505, sold202506,
                   sold202507, sold202508, sold202509, sold202510, sold202511, sold202512,
-                  sold202601, sold202602, sold202603], ignore_index=True)
+                  sold202601, sold202602, sold202603, listing202604], ignore_index=True)
 
 
 
